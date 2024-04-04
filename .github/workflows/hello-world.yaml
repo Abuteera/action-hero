@@ -3,10 +3,10 @@ on:
   push:
     branches:
       - main
-    pull_request:
+  pull_request:
       branches: -main
-workflow_dispatch:
-  jobs:
+  workflow_dispatch:
+jobs:
     hello:
       runs-on: ubuntu-latest
       steps:
@@ -14,9 +14,9 @@ workflow_dispatch:
         - name: hello world
           run: echo "Hello world"
           shell: bash
-goodbye:
-  runs-on: ubuntu latest
-  steps:
-    - name: goodbye world
-      run: echo "Goodbye World"
-      shell: bash
+    goodbye:
+      runs-on: ubuntu latest
+      steps:
+        - name: goodbye world
+          run: echo "Goodbye World"
+          shell: bash
